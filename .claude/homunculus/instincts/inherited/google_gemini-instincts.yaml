@@ -1,0 +1,323 @@
+# Instincts generated from https://github.com/canstralian/google_gemini
+# Generated: 2026-05-08T21:19:24.164Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: google_gemini-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/canstralian/google_gemini
+---
+
+# Google_gemini Commit Length
+
+## Action
+
+Write moderate-length commit messages (~64 characters)
+
+## Evidence
+
+- Average commit message length: 64 chars
+- Based on 1 commits
+
+---
+id: google_gemini-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/canstralian/google_gemini
+---
+
+# Google_gemini Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: google_gemini-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/canstralian/google_gemini
+---
+
+# Google_gemini Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: google_gemini-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/canstralian/google_gemini
+---
+
+# Google_gemini Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: google_gemini-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/canstralian/google_gemini
+---
+
+# Google_gemini Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: google_gemini-workflow-bulk-dependency-update-across-multiple-packages
+trigger: "when doing bulk dependency update across multiple packages"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/canstralian/google_gemini
+---
+
+# Google_gemini Workflow Bulk Dependency Update Across Multiple Packages
+
+## Action
+
+Follow the bulk-dependency-update-across-multiple-packages workflow:
+1. Identify outdated dependencies in multiple packages.
+2. Update package.json (if present) and lockfiles (package-lock.json, pnpm-lock.yaml) in each affected package/directory.
+3. Regenerate lockfiles to reflect new dependency versions.
+4. Commit all updated package.json and lockfile changes together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: **/package.json, **/package-lock.json, **/pnpm-lock.yaml
+
+---
+id: google_gemini-naming-files-kebab-case
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Naming Files Kebab Case
+
+## Action
+
+Use kebab-case for file names (e.g., my-file.ts)
+
+## Evidence
+
+- Pattern in namingConventions.files: kebab-case
+
+---
+id: google_gemini-naming-functions-camelCase
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Naming Functions CamelCase
+
+## Action
+
+Use camelCase for function names (e.g., fetchData)
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: google_gemini-naming-classes-PascalCase
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Naming Classes PascalCase
+
+## Action
+
+Use PascalCase for class names (e.g., UserService)
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: google_gemini-naming-constants-SCREAMING_SNAKE_CASE
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Naming Constants SCREAMING_SNAKE_CASE
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names (e.g., MAX_RETRIES)
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: google_gemini-imports-relative
+trigger: "When importing modules within the project"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Imports Relative
+
+## Action
+
+Use relative import paths (e.g., import x from '../module')
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: google_gemini-exports-named
+trigger: "When exporting functions, classes, or constants"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Exports Named
+
+## Action
+
+Use named exports (e.g., export { myFunction })
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: google_gemini-testing-separate-folder
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Testing Separate Folder
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: google_gemini-git-commit-freeform
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Git Commit Freeform
+
+## Action
+
+Use freeform commit messages without enforced prefixes
+
+## Evidence
+
+- Pattern in commits.type: freeform
+- No prefixes enforced in commit examples
+
+---
+id: google_gemini-git-commit-bulk-update-format
+trigger: "When committing bulk dependency updates across multiple packages"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Git Commit Bulk Update Format
+
+## Action
+
+Summarize the update in the commit message, mentioning the number of directories/packages and updates (e.g., 'Bump the npm_and_yarn group across 15 directories with 5 updates')
+
+## Evidence
+
+- Commit example: 'Bump the npm_and_yarn group across 15 directories with 5 updates'
+
+---
+id: google_gemini-workflow-bulk-dependency-update
+trigger: "When dependencies need to be updated across multiple packages/directories"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: canstralian/google_gemini
+---
+
+# Google_gemini Workflow Bulk Dependency Update
+
+## Action
+
+Identify outdated dependencies, update package.json and lockfiles, regenerate lockfiles, and commit all changes together
+
+## Evidence
+
+- Workflow: bulk-dependency-update-across-multiple-packages
+- Commit sequence and files involved in workflow description
+
