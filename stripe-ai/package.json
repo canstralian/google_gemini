@@ -23,9 +23,9 @@
   "author": "Restack",
   "license": "ISC",
   "dependencies": {
-    "@ai-sdk/openai": "^1.0.6",
+    "@ai-sdk/openai": "^3.0.69",
     "@restackio/ai": "^0.0.90",
-    "@stripe/agent-toolkit": "^0.1.21",
+    "@stripe/agent-toolkit": "^0.9.0",
     "dotenv": "^16.4.6"
   },
   "devDependencies": {
